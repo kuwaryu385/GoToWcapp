@@ -1,12 +1,25 @@
+
 plugins {
 	id 'org.springframework.boot' version '2.3.10.BUILD-SNAPSHOT'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id 'war'
+	id 'application'
 }
+
+mainClassName = 'product.GotoWCappApplication'
 
 group = 'product'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
+
+
+bootJar {
+  baseName = "demo"
+  version =  "0.0.1-SNAPSHOT"
+
+}
+
 
 repositories {
 	mavenCentral()
